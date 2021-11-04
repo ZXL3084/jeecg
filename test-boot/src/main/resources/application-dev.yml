@@ -1,0 +1,22 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://jeecg-boot-mysql:3306/jeecg-boot?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+  #配置日志
+#  mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+  #逻辑删除
+#  mybatis-plus.global-config.db-config.logic-delete-value=1
+#  mybatis-plus.global-config.db-config.logic-not-delete-value=0
+server:
+  port: 8800
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
