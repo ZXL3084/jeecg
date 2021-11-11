@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * @Description:
  */
 //代码生成器
-public class CodeTest {
+public class codeTest {
 
     public static void main(String[] args) {
         //需要构建一个代码生成器 对象

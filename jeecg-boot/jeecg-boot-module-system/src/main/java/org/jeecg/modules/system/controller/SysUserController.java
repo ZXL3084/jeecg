@@ -63,7 +63,7 @@ import java.util.stream.Collectors;
 public class SysUserController {
 	@Autowired
 	private ISysBaseAPI sysBaseAPI;
-	
+
 	@Autowired
 	private ISysUserService sysUserService;
 
@@ -130,7 +130,7 @@ public class SysUserController {
 	}
 
     //@RequiresRoles({"admin"})
-    //@RequiresPermissions("user:add")
+//    @RequiresPermissions("user:add")
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public Result<SysUser> add(@RequestBody JSONObject jsonObject) {
 		Result<SysUser> result = new Result<SysUser>();
@@ -839,7 +839,7 @@ public class SysUserController {
         }
         return result;
     }
-    
+
     /**
          *  查询当前用户的所有部门/当前部门编码
      * @return
@@ -862,12 +862,12 @@ public class SysUserController {
         return result;
     }
 
-    
+
 
 
 	/**
 	 * 用户注册接口
-	 * 
+	 *
 	 * @param jsonObject
 	 * @param user
 	 * @return
@@ -1005,7 +1005,7 @@ public class SysUserController {
 		result.setSuccess(true);
 		return result;
 	}
-	
+
 	/**
 	 * 用户更改密码
 	 */
@@ -1049,11 +1049,11 @@ public class SysUserController {
             return result;
         }
     }
-	
+
 
 	/**
 	 * 根据TOKEN获取用户的部分信息（返回的数据是可供表单设计器使用的数据）
-	 * 
+	 *
 	 * @return
 	 */
 	@GetMapping("/getUserSectionInfoByToken")
@@ -1064,7 +1064,7 @@ public class SysUserController {
 			if (oConvertUtils.isEmpty(token)) {
 				 username = JwtUtil.getUserNameByToken(request);
 			} else {
-				 username = JwtUtil.getUsername(token);				
+				 username = JwtUtil.getUsername(token);
 			}
 
 			log.debug(" ------ 通过令牌获取部分用户信息，当前用户： " + username);
@@ -1085,7 +1085,7 @@ public class SysUserController {
 			return Result.error(500, "查询失败:" + e.getMessage());
 		}
 	}
-	
+
 	/**
 	 * 【APP端接口】获取用户列表  根据用户名和真实名 模糊匹配
 	 * @param keyword
@@ -1122,7 +1122,7 @@ public class SysUserController {
 			log.error(e.getMessage(), e);
 			return Result.error(500, "查询失败:" + e.getMessage());
 		}
-		
+
 	}
 
     /**

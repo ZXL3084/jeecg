@@ -39,7 +39,7 @@ public class CcKefuServiceImpl extends ServiceImpl<CcKefuMapper, CcKefuEntity> i
     }
 
     @Override
-    @Cacheable(cacheNames = "getRedisById",key = "#id")
+    @Cacheable(value = "getRedisById",key = "#id")
     public CcKefuEntity getRedisById(String id) {
         CcKefuEntity ccKefuEntity = this.baseMapper.selectById(id);
         System.out.println("查数据库-----");

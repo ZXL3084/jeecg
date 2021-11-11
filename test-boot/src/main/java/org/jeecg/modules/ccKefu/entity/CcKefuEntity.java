@@ -1,6 +1,7 @@
 package org.jeecg.modules.ccKefu.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jeecg.modules.util.DataEntity;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.Version;
@@ -33,6 +34,8 @@ public class CcKefuEntity extends DataEntity{
     /**
      * 年龄
      */
+//    实体字段加注解
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)  // 敏感字段
     private Integer age;
 
     /**

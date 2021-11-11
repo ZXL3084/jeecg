@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @Auther: ZhuXiangLong
@@ -13,6 +16,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 @SpringBootApplication
 @MapperScan("org.jeecg.modules.ccKefu.mapper")
+@EnableScheduling  //开启定时功能注解   缓存
+@EnableCaching
+//@EnableAsync  //开启异步注解功能
 public class JeecgApplication {
 
     public static void main(String[] args) {
