@@ -8,12 +8,18 @@ import io.swagger.annotations.ApiOperation;
 import org.jeecg.modules.ccKefu.entity.CcKefuEntity;
 import org.jeecg.modules.ccKefu.req.KeFuPageListReq;
 import org.jeecg.modules.ccKefu.service.ICcKefuService;
+import org.jeecg.modules.util.JWTUtils;
 import org.jeecg.modules.util.PageWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import javax.annotation.Resources;
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -30,6 +36,9 @@ public class CcKefuController {
     @Autowired
     ICcKefuService ccKefuService;
 
+    @Resource
+    JWTUtils jwtUtils;
+
     @GetMapping("/getPageList")
     @ApiOperation("分页查询")
     public PageWrapper<CcKefuEntity> getPageList(@ModelAttribute("req") KeFuPageListReq req){
@@ -41,5 +50,15 @@ public class CcKefuController {
     @ApiOperation("查询所有")
     public CcKefuEntity getById(@PathVariable("id") String id){
         return ccKefuService.getRedisById(id);
+    }
+
+    @GetMapping("/login")
+    @ApiOperation("登录")
+    public CcKefuEntity login() throws UnsupportedEncodingException {
+        Map<String,String> map=new HashMap<>();
+        map.put("name","小明");
+        CcKefuEntity ccKefuEntity=new CcKefuEntity();
+        ccKefuEntity.setContext(jwtUtils.getToken(map));
+        return ccKefuEntity;
     }
 }

@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,8 @@ import java.util.ArrayList;
 //代码生成器
 public class codeTest {
 
-    public static void main(String[] args) {
+    @Test
+    public  void testCode() {
         //需要构建一个代码生成器 对象
         AutoGenerator mpg =new AutoGenerator();
 

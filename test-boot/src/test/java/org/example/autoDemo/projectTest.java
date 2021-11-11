@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import org.jeecg.modules.util.DataEntity;
+import org.junit.jupiter.api.Test;
 
 
 import java.util.ArrayList;
@@ -19,7 +20,9 @@ import java.util.List;
  * @Description:
  */
 public class projectTest {
-    public static void main(String[] args) {
+
+    @Test
+    public  void testProject() {
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
