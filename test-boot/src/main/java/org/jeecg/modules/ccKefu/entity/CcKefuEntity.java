@@ -1,5 +1,6 @@
 package org.jeecg.modules.ccKefu.entity;
 
+import cn.afterturn.easypoi.excel.annotation.Excel;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jeecg.modules.util.DataEntity;
@@ -24,11 +25,13 @@ public class CcKefuEntity extends DataEntity{
     /**
      * 所属部门
      */
+    @Excel(name = "所属部门")
     private String sysOrgCode;
 
     /**
      * 客服名字
      */
+    @Excel(name = "客服名字")
     private String name;
 
     /**
@@ -36,21 +39,25 @@ public class CcKefuEntity extends DataEntity{
      */
 //    实体字段加注解
 //    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)  // 敏感字段
+    @Excel(name = "年龄")
     private Integer age;
 
     /**
      * 性别
      */
+    @Excel(name = "性别",replace = {"男_1", "女_2"},suffix = "生")
     private String sex;
 
     /**
      * 生日
      */
+    @Excel(name = "生日",databaseFormat ="yyyyMMddHHmmss",format ="yyyy-MM-dd",width = 20)
     private LocalDateTime birth;
 
     /**
      * 描述
      */
+    @Excel(name = "描述")
     private String context;
 
     public String getSysOrgCode() {

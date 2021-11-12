@@ -3,6 +3,8 @@ spring:
     name: jeecg-test
   profiles:
     active: dev
+  freemarker:
+    check-template-location: false
 
 
 

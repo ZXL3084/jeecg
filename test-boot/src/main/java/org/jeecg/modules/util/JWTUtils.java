@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Calendar;
@@ -14,6 +15,7 @@ import java.util.Map;
  * @Date: 2021-08-04
  * @Description:
  */
+@Component
 public class JWTUtils {
 
     private static final String SING="!Q#$2R@@#";
@@ -23,7 +25,7 @@ public class JWTUtils {
      */
     public String getToken(Map<String, String> map) throws UnsupportedEncodingException {
         Calendar instance = Calendar.getInstance();
-        instance.add(Calendar.SECOND, 60);  //过期时间
+        instance.add(Calendar.SECOND, 3600);  //过期时间
 
         //创建JWT Builder
         JWTCreator.Builder builder = JWT.create();

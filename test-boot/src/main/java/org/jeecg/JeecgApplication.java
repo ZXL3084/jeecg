@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -16,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @Description:
  */
 @Slf4j
-@SpringBootApplication(scanBasePackages = "util")
+@SpringBootApplication
 @MapperScan("org.jeecg.modules.ccKefu.mapper")
 @EnableScheduling  //开启定时功能注解   缓存
 @EnableCaching

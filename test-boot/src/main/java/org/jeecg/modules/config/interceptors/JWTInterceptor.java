@@ -1,4 +1,4 @@
-package org.jeecg.modules.ccKefu.interceptors;
+package org.jeecg.modules.config.interceptors;
 
 import com.auth0.jwt.exceptions.AlgorithmMismatchException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
