@@ -1,6 +1,5 @@
 package org.jeecg.modules.ccKefu.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.jeecg.modules.ccKefu.entity.CcKefuEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -10,9 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zxl
- * @since 2021-11-03
+ * @since 2021-11-15
  */
-@Mapper
 public interface CcKefuMapper extends BaseMapper<CcKefuEntity> {
 
 }

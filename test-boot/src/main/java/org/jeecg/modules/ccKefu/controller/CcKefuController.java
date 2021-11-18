@@ -7,7 +7,6 @@ import org.jeecg.modules.ccKefu.req.KeFuPageListReq;
 import org.jeecg.modules.ccKefu.service.ICcKefuService;
 import org.jeecg.modules.util.JWTUtils;
 import org.jeecg.modules.util.PageWrapper;
-import org.jeecg.modules.util.Result;
 import org.jeecg.modules.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +21,7 @@ import java.util.Map;
  * </p>
  *
  * @author zxl
- * @since 2021-11-03
+ * @since 2021-11-15
  */
 @RestController
 @RequestMapping("/ccKefu")
@@ -47,11 +46,4 @@ public class CcKefuController {
         return ccKefuService.getRedisById(id);
     }
 
-    @PostMapping("/login")
-    @ApiOperation("登录")
-    public Result login() throws UnsupportedEncodingException {
-        Map<String,String> map=new HashMap<>();
-        map.put("name","小明");
-        return ResultUtil.success(jwtUtils.getToken(map));
-    }
 }

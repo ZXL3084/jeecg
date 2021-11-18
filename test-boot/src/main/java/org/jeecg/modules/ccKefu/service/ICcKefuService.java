@@ -4,7 +4,8 @@ import org.jeecg.modules.ccKefu.entity.CcKefuEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.jeecg.modules.ccKefu.req.KeFuPageListReq;
 import org.jeecg.modules.util.PageWrapper;
-import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * </p>
  *
  * @author zxl
- * @since 2021-11-03
+ * @since 2021-11-15
  */
 public interface ICcKefuService extends IService<CcKefuEntity> {
 
