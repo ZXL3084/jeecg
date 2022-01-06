@@ -23,7 +23,7 @@ public class ExcelDiceAddressListHandlerImpl implements IExcelDictHandler {
      */
     @Override
     public List<Map> getList(String dict) {
-        List<Map>           list    = new ArrayList<>();
+        List<Map> list = new ArrayList<>();
         Map<String, String> dictMap = new HashMap<>();
         dictMap.put("dictKey", "0");
         dictMap.put("dictValue", "严重瞌睡");

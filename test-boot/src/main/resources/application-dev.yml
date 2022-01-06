@@ -27,6 +27,24 @@ spring:
     host: smtp.qq.com
     properties:
       mail.smtp.ssl.enable: true
+  servlet:
+    multipart:
+      enabled: true      #开启上传下载
+      max-file-size: 20MB  #最大的文件大小
+      max-request-size: 20MB  #单次最大的请求大小
+file:
+  upload:
+    dir: D/testFile
+    disableTypes: dll,exe
+
+
+source:
+  name: 张三
+  infos: "{'a':'123','b':'456'}"
+  message: k:123456 l:654321
+
+
+
 
 
 
@@ -41,6 +59,9 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
 
 
 

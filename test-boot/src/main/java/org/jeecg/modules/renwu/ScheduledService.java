@@ -44,17 +44,17 @@ public class ScheduledService {
      *  0 3/ * * * ?
      *  每三分钟执行一次
      */
-    @Scheduled(cron = "0 46 14 * * ?")
+//    @Scheduled(cron = "0 46 14 * * ?")
     public void hello(){
         System.out.println("EDG，牛皮！！！！");
     }
 
-    @Scheduled(cron = "${test_cron}")
+//    @Scheduled(cron = "${test_cron}")
     public void hello2(){
         System.out.println("EDG，牛皮！！！！");
     }
 
-    @Scheduled(cron = "${chuan_cron}")
+//    @Scheduled(cron = "${chuan_cron}")
     public void hello3(){
         SimpleMailMessage mailMessage=new SimpleMailMessage();
         mailMessage.setSubject("你好,刘川!");

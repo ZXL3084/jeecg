@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.pagehelper.PageHelper;
 import org.jeecg.modules.ccKefu.entity.CcKefuEntity;
+import org.jeecg.modules.ccKefu.entity.Person;
 import org.jeecg.modules.ccKefu.mapper.CcKefuMapper;
 import org.jeecg.modules.ccKefu.req.KeFuPageListReq;
 import org.jeecg.modules.ccKefu.service.ICcKefuService;
@@ -39,7 +40,7 @@ public class CcKefuServiceImpl extends ServiceImpl<CcKefuMapper, CcKefuEntity> i
     }
 
     @Override
-    @Cacheable(value = "getRedisById",key = "#id")
+//    @Cacheable(value = "getRedisById",key = "#id")
     public CcKefuEntity getRedisById(String id) {
         CcKefuEntity ccKefuEntity = this.baseMapper.selectById(id);
         System.out.println("查数据库-----");
